@@ -35,7 +35,7 @@ typedef struct {
 
 class FSEDHT;
 
-typedef std::function<void(float humid, float temp)> afterRead_CB;
+typedef std::function<void(float humid, float temp)> vafterRead_CB;
 typedef std::function<void(FSEDHT *dht11)> afterReadPt_CB;
 typedef std::function<void(FSEDHT_error_t _error)> onError_CB;
 
