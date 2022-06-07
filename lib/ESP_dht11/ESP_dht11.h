@@ -28,12 +28,19 @@ class ESP_dht11{
     void read();
     
     protected:
+    volatile    int8_t    _result;
+    volatile    uint8_t   _data[5];
+
 
 
 
     private:
     uint8_t _pin;
     void sendStart();
+    afterRead_CB        _afterRead;
+    afterReadPt_CB      _afterReadPt;
+    onError_CB          error_Callback;
+    volatile    uint8_t     _counter;
 
 };
 
